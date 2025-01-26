@@ -9,29 +9,44 @@
                 display: flex;
                 background-color: black;
                 color: white;
-                height: 120px;
+                height: 10%;
+                width: 100%;
+                position: absolute;
+                left: 0;right: 0;
+            }
+            .img_Titre_Header{
+                margin-left: 1%;
             }
             .logo{
                 height: 40px;
-                width: 40px;
+                width: 5%;
                 margin-right: 0;
                 margin-top: 10px;
             }
-            h1{
+            .Titre_Du_Header{
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 15px;
+                font-size: 100%;
                 font-weight: 900;
                 color: yellow;
-                width: 150px;
+                width: 15%;
                 margin-left: 0px;
             }
-            ul{
+            .ul_Du_Header{
                 display: flex;
-                gap: 30px;
-                margin-left: 200px;
-                margin-right: 30px;
                 font-weight: 600;
                 font-family: Arial, Helvetica, sans-serif;
+                width: 50%;
+                padding: 0 0 0 0;
+                text-align: center;
+            }
+            .li_Header{
+                width: 33.3%;
+                margin: 0 0 0 60px;
+            }
+            .Recherche_Input{
+                width: 25%;
+                margin: auto 0 auto auto;
+                right: 0;
             }
             .background{
                 background-image: url('IMG-20240109-WA0005.jpg');
@@ -39,12 +54,6 @@
                 height: 700px;
                 width: 100%;
             }
-            @media screen and (max-width:720px){
-                .background{
-                    background-size: contain;
-                }
-            }
-            
             .title{
                 color: black;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -90,18 +99,29 @@
                 margin-top: 30px;
                 margin-left: 20px;
             }
-            
+            @media screen and (max-width: 765px) {
+                header{
+                    width: 100%;
+                }
+                .ul_Du_Header{
+                    display: block;
+                }
+            }
+            @media screen and (max-width: 712px) {
+
+            }
         </style>
     </head>
     <body>
         <header>
+            <div class="img_Titre_Header"></div>
             <img src="cobra-logo-V3_400x400.png" alt="" class="logo">
-            <h1>ACADEMIE KARATE COBRA</h1>
-            <nav>
-                <ul>
-                    <li>Présentation</li>
-                    <li>Nos cours</li>
-                    <li>contacts</li>
+            <h1 class="Titre_Du_Header">ACADEMIE KARATE COBRA</h1>
+            <nav class="ul_et_RechercheInput">
+                <ul class="ul_Du_Header">
+                    <li class="li_Header">Présentation</li>
+                    <li class="li_Header">Nos_cours</li>
+                    <li class="li_Header">contacts</li>
                 </ul>
             </nav>
             <div class="Recherche_Input">
