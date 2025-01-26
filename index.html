@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Académie Karaté Cobra</title>
         <style>
             header{
@@ -25,7 +27,7 @@
             }
             .Titre_Du_Header{
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 100%;
+                font-size: 15px;
                 font-weight: 900;
                 color: yellow;
                 width: 15%;
@@ -44,9 +46,24 @@
                 margin: 0 0 0 60px;
             }
             .Recherche_Input{
-                width: 25%;
+
+                width: 15%;
                 margin: auto 0 auto auto;
                 right: 0;
+                border: solid black;
+                background-color: white;
+            }
+            .RechercheButton{
+                border: none;
+                background-color: white;
+                cursor: pointer;
+            }
+            .ChampRecherche{
+                position: relative;
+                right: 0;
+                width: 75%;
+                height: 100%;
+                border: none;
             }
             .background{
                 background-image: url('IMG-20240109-WA0005.jpg');
@@ -99,12 +116,29 @@
                 margin-top: 30px;
                 margin-left: 20px;
             }
-            @media screen and (max-width: 765px) {
+            @media screen and (max-width: 872px) {
                 header{
                     width: 100%;
                 }
                 .ul_Du_Header{
-                    display: block;
+                    height: 80%;
+                }
+                .Recherche_Input{
+                    width: 7%;
+                    height: 60%;
+                }
+                .ChampRecherche{
+                    display: none;
+                }
+                .RechercheButton{
+                    height: 100%;
+                    width: 100%;
+                    background-color: black;
+                    color: white;
+                    font-size: 15px;
+                }
+                .RechercheButton i {
+                    font-size: 40px;
                 }
             }
             @media screen and (max-width: 712px) {
@@ -125,8 +159,8 @@
                 </ul>
             </nav>
             <div class="Recherche_Input">
-                <button type="submit" class="RechercheButton">🔍</button>
-                <input type="text" placeholder="Rechercher..." class="ChampRecherche" required>
+                <button type="submit" class="RechercheButton" id="RechercheButton"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Rechercher..." class="ChampRecherche" required id="ChampRecherche">
             </div>
         </header>
         <div class="background">
@@ -153,4 +187,16 @@
             </div>
         </div>
     </body>
+    <script>
+        document.getElementById("RechercheButton").addEventListener("click",function (){
+            const ChampRecherche= document.getElementById("ChampRecherche");
+            if(ChampRecherche.style.display==='none'|| ChampRecherche.style.display===''){
+                ChampRecherche.style.display='inline-block';
+                ChampRecherche.focus();
+            }
+            else{
+                ChampRecherche.style.display='none'
+            }
+        })
+    </script>
 </html>
