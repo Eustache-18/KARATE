@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Académie Karaté Cobra</title>
         <style>
+            body{
+                display: block;
+            }
             header{
                 display: flex;
                 background-color: black;
                 color: white;
-                height: 10%;
+                height: 120px;
                 width: 100%;
                 position: absolute;
                 left: 0;right: 0;
@@ -99,9 +102,10 @@
                 font-weight: 800;
                 color: black;
             }
+            .presentation{display: block;}
             .page2{
                 display: flex;
-                position: absolute;
+                position: relative;
                 left: 0;
             }
             .container_text{
@@ -124,6 +128,27 @@
                 margin-left: 20px;
                 display: inline-block;
                 font-size: small;
+            }
+            .Devise_Principe{
+                display: block;
+                width: 75%;
+                border-width: 15px;
+                border: solid black;
+                text-align: center;
+                margin-left: 5%;
+                margin-top: 15px;
+            }
+            .Title_Devise{
+                border-bottom: solid black;
+                border-width: 10px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: black;
+                font-size: 30px;
+            }
+            .Devise_Principe p{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: black;
+                font-size: 30px;
             }
             @media screen and (max-width: 872px) {
                 header{
@@ -209,31 +234,38 @@
                     </div>
                 </div>
         </div>
-        <div class="page2" id="presentation">
-            <img src="IMG_3868.JPG" alt="" class="image1">
-            <div class="container_text">
-            <div class="title2">À PROPOS DE NOTRE ACADEMIE DE KARATE </div>
-            <div class="text">Un centre de formation et d'apprentissage de Karaté et des Art-Martiaux ; L'Académie de Karaté Cobra de Beni 
-                a été créé dans la ville de Beni en 2012 par le Grand maître MUZALIWA Bita centure noir 4e Dan (YODAN). La 
-                ville de Beni étant situé dans la partie Est de la RDC, une région en proie à l'insécurité et à multiples 
-                attaques criminelles et autres, Le Grand maître MUZALIWA Bita fut inspiré de créer un centre d'apprentissage 
-                de Karaté et d'Art-Martiaux dans le but d'aider la population surtout les jeunes et enfants de se doter de 
-                capacité pour se défendre et peut-être sauvé des vie en cas de danger.
-                Notre centre offre des cours de karaté et d'arts martiaux pour tous les âges et niveaux. Rejoignez-nous pour développer vos compétences et votre confiance !</div> 
+        <div id="presentation" class="presentation">
+            <div class="page2" >
+                <img src="IMG_3868.JPG" alt="" class="image1">
+                <div class="container_text">
+                    <div class="title2">À PROPOS DE NOTRE ACADEMIE DE KARATE </div>
+                    <div class="text">Un centre de formation et d'apprentissage de Karaté et des Art-Martiaux ; L'Académie de Karaté Cobra de Beni 
+                    a été créé dans la ville de Beni en 2012 par le Grand maître MUZALIWA Bita centure noir 4e Dan (YODAN). La 
+                    ville de Beni étant situé dans la partie Est de la RDC, une région en proie à l'insécurité et à multiples 
+                    attaques criminelles et autres, Le Grand maître MUZALIWA Bita fut inspiré de créer un centre d'apprentissage 
+                    de Karaté et d'Art-Martiaux dans le but d'aider la population surtout les jeunes et enfants de se doter de 
+                    capacité pour se défendre et peut-être sauvé des vie en cas de danger.
+                    Notre centre offre des cours de karaté et d'arts martiaux pour tous les âges et niveaux. Rejoignez-nous pour développer vos compétences et votre confiance !</div> 
+                </div>
+            </div>
+            <div class="Devise_Principe">
+                <h2 class="Title_Devise">DEVISE ET PRINCIPES DE NOTRE ACADEMIE DE KARATE</h2>
+                <p class="Devise"> Vitesse Puissance Précision </p>
+                <p class="Principes"> Ecole de la Maîtrise de sois Et de la Perfection de Caractère </p>
             </div>
         </div>
-        <script>
-           document.getElementById("RechercheButton").addEventListener("click",function (){
-            const ChampRecherche= document.getElementById("ChampRecherche");
-            const ul_et_RechercheInput= document.getElementById('ul_et_RechercheInput');
-                if(ChampRecherche.style.display==='none'|| ChampRecherche.style.display==='' ){
-                    ChampRecherche.style.display='inline-block';
-                    ChampRecherche.focus();
-                    }
-                else{
-                    ChampRecherche.style.display='none';
-                    }
-                })
-        </script>
     </body>
+    <script>
+        document.getElementById("RechercheButton").addEventListener("click",function (){
+         const ChampRecherche= document.getElementById("ChampRecherche");
+         const ul_et_RechercheInput= document.getElementById('ul_et_RechercheInput');
+             if(ChampRecherche.style.display==='none'|| ChampRecherche.style.display==='' ){
+                 ChampRecherche.style.display='inline-block';
+                 ChampRecherche.focus();
+                 }
+             else{
+                 ChampRecherche.style.display='none';
+                 }
+             })
+     </script>
 </html>
