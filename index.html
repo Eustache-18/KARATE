@@ -16,14 +16,12 @@
                 position: absolute;
                 left: 0;right: 0;
             }
-            .img_Titre_Header{
-                margin-left: 1%;
-            }
             .logo{
                 height: 40px;
                 width: 5%;
                 margin-right: 0;
                 margin-top: 10px;
+                margin-left: 1%;
             }
             .Titre_Du_Header{
                 font-family: Arial, Helvetica, sans-serif;
@@ -47,11 +45,11 @@
             }
             .Recherche_Input{
 
-                width: 15%;
+                width: 20%;
                 margin: auto 0 auto auto;
                 right: 0;
                 border: solid black;
-                background-color: white;
+                background-color: black;
             }
             .RechercheButton{
                 border: none;
@@ -79,8 +77,17 @@
                 text-align: center;
                 margin: top 0;
                 position: absolute;
-                top: 60%;
+                top: 30%;
                 left: 5%;
+            }
+            .underTitle_background{
+                font-size: 20px;margin-top: 30px;border:solid black;
+                width: 400px;color: yellow;
+                background-color: rgba(0, 0, 255, 0.5);
+                font-weight: 900;
+                border-width: 10px;
+                left: 5%;
+                filter: brightness(120%);
             }
             .image1{
                 height: 500px;
@@ -115,6 +122,8 @@
             .text{
                 margin-top: 30px;
                 margin-left: 20px;
+                display: inline-block;
+                font-size: small;
             }
             @media screen and (max-width: 872px) {
                 header{
@@ -124,11 +133,13 @@
                     height: 80%;
                 }
                 .Recherche_Input{
-                    width: 7%;
+                    width: 40%;
                     height: 60%;
                 }
                 .ChampRecherche{
                     display: none;
+                    width: 80%;
+                    height: 50%;
                 }
                 .RechercheButton{
                     height: 100%;
@@ -139,19 +150,32 @@
                 }
                 .RechercheButton i {
                     font-size: 40px;
+                    position: relative;
+                    left: 40%;
                 }
             }
-            @media screen and (max-width: 712px) {
-
+            @media screen and (max-width: 700px) {
+                .ul_Du_Header{
+                    display: block;
+                }
+                .background{
+                    background-image: none;
+                    background-color: rgba(128, 128, 128, 0.5);;
+                    
+                }
+            }
+            @media screen and (max-width: 564px){
+                .title{
+                    top: 12%;  
+                }
             }
         </style>
     </head>
     <body>
-        <header>
-            <div class="img_Titre_Header"></div>
+        <header id="header">            
             <img src="cobra-logo-V3_400x400.png" alt="" class="logo">
             <h1 class="Titre_Du_Header">ACADEMIE KARATE COBRA</h1>
-            <nav class="ul_et_RechercheInput">
+            <nav class="ul_et_RechercheInput" id="ul_et_RechercheInput">
                 <ul class="ul_Du_Header">
                     <li class="li_Header">Présentation</li>
                     <li class="li_Header">Nos_cours</li>
@@ -159,16 +183,14 @@
                 </ul>
             </nav>
             <div class="Recherche_Input">
-                <button type="submit" class="RechercheButton" id="RechercheButton"><i class="fa fa-search"></i></button>
                 <input type="text" placeholder="Rechercher..." class="ChampRecherche" required id="ChampRecherche">
+                <button type="submit" class="RechercheButton" id="RechercheButton"><i class="fa fa-search"></i></button>
             </div>
         </header>
         <div class="background">
-           <div class="title"> ACADEMIE KARATE COBRA DE BENI <br>
-                <div style="font-size: 20px;margin-top: 30px;border:solid black;
-                width: 400px;color: yellow;
-                font-weight: 900;border-width: 10px;
-                left: 5%;"> Inscrivez vous et réjoignez notre 
+           <div class="title"> 
+                <div class="title_background">ACADEMIE KARATE COBRA DE BENI </div>
+                <div class="underTitle_background"> Inscrivez vous et réjoignez notre 
                 prochaine séance d'entrainement
                     </div>
                 </div>
@@ -186,17 +208,18 @@
                 Notre centre offre des cours de karaté et d'arts martiaux pour tous les âges et niveaux. Rejoignez-nous pour développer vos compétences et votre confiance !</div> 
             </div>
         </div>
-    </body>
-    <script>
-        document.getElementById("RechercheButton").addEventListener("click",function (){
+        <script>
+           document.getElementById("RechercheButton").addEventListener("click",function (){
             const ChampRecherche= document.getElementById("ChampRecherche");
-            if(ChampRecherche.style.display==='none'|| ChampRecherche.style.display===''){
-                ChampRecherche.style.display='inline-block';
-                ChampRecherche.focus();
-            }
-            else{
-                ChampRecherche.style.display='none'
-            }
-        })
-    </script>
+            const ul_et_RechercheInput= document.getElementById('ul_et_RechercheInput');
+                if(ChampRecherche.style.display==='none'|| ChampRecherche.style.display==='' ){
+                    ChampRecherche.style.display='inline-block';
+                    ChampRecherche.focus();
+                    }
+                else{
+                    ChampRecherche.style.display='none';
+                    }
+                })
+        </script>
+    </body>
 </html>
